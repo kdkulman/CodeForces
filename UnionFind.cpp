@@ -14,7 +14,8 @@ int main() {
 }
 
 class UnionFind {
-    
+
+
     private:
         vector<int> parents;
         vector<int> rank;
