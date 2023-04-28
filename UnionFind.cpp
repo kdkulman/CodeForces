@@ -6,11 +6,17 @@
 #include <vector>
 #include <iostream>
 
+#define min3(a, b, c) min(a, min(b, c));
+
 using namespace std;
 
 int main() {
     vector<int> parents;
     vector<int> rank;
+    string s = "kevin";
+
+    cout << min3(1, 2, 3);
+
 }
 
 class UnionFind {
