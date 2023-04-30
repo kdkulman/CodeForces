@@ -1,46 +1,59 @@
-//https://codeforces.com/problemset/problem/1742/C
 #include <iostream>
 #include <algorithm>
 #include <vector>
 #include <string>
+#include <cmath>
+#include <sstream>
+#include <unordered_set>
 
+//https://codeforces.com/problemset/problem/1607/B
 using namespace std;
-char checkRows();
 
+bool isEven(long long x) {
+    if (x % 2 == 0) return true;
+    return false;
+}
 
 int main() {
     int t;
     cin >> t; 
-    vector<char> res;
-    for (int i = 0; i < t; i++) {
-        char c = checkRows();
-        res.push_back(c);
-        res.push_back('\n');          
-    }
+    vector<long long> res;
+    while(t--) {
+        long long x, n;
+        cin >> x;
+        cin >> n;
 
-    for (char c : res) cout << c;
-}
-
-char checkRows() {
-    int maxReds = 0;
-
-    for (int row = 0; row < 8; row++) {
-        string s; 
-        cin >> s;
-        int reds = 0;
-
-        for (int col = 0; col < 8; col++) {
-            if (s[col] == 'R') reds++;
+        if (n % 4 == 0){
+            res.push_back(x);
+            continue;
         }
-        maxReds = max(maxReds, reds);
+
+        if (n % 2 == 0){
+            if (isEven(x)) {
+                x += 1;
+            } else {
+                x -= 1;
+            }
+            res.push_back(x);
+            continue;
+        }
+
+        if (n % 2 == 1)res.push_back(x-n);
+
+        while (n % 4 != 0) {
+
+        }
+
+        res.push_back(x);
     }
-    if (maxReds == 8) return 'R';
-    return 'B';
+
+    for (long long i : res) cout << i << '\n';
+
 }
 
 
 /*
-    
+1
+0 1
 
-    
 */
