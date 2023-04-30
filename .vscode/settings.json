@@ -3,6 +3,8 @@
         "*.embeddedhtml": "html",
         "xutility": "cpp",
         "cmath": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp"
     }
 }
