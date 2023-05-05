@@ -23,6 +23,7 @@ int main() {
         
         for (int i = 0; i < n; i++) cin >> mAtk[i];
         for (int i = 0; i < n; i++) cin >> mHp[i];
+
         for (int i = 0; i < n; i++) damageCost[i] = floor(mHp[i]/pAtk) * mAtk[i];
 
         double max = -1, maxIndex = 0;
