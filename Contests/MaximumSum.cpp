@@ -25,7 +25,6 @@ void solve(string s, vector<string>& res){
 
 int main() {
     int t;
-
     cin >> t;
     vector<long long> res; 
     while(t--) {
@@ -52,7 +51,6 @@ int main() {
     }
 
     for (long long s : res) cout << s << '\n';
-
 }   
 
 
