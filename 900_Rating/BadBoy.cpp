@@ -53,6 +53,6 @@ int main() {
         for (long long i : list)
             cout << i << " ";
         cout << '\n';
-
++
     }
 }   
