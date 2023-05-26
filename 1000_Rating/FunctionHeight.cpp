@@ -9,7 +9,6 @@
 using namespace std;
 
 //https://codeforces.com/problemset/problem/1036/A
-
 int main() {
     int t;
     cin >> t;
